@@ -52,4 +52,5 @@ services:
       - "traefik.http.routers.tracker.entrypoints=websecure"
       - "traefik.http.routers.tracker.tls.certresolver=myresolver"
       - traefik.webservice.frontend.entryPoints=http,https,ws,wss
+      - "traefik.http.services.tracker.loadbalancer.server.port=8000"
 ```
